@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -165,6 +165,21 @@
 </body>
 
 <script>
+
+window.addEventListener("keypress", function(keyPressEvent) {
+  const tone = document.querySelector(`audio[data-key="${keyPressEvent.keyCode}"]`);
+  if (!tone) return;
+  const pianoKey = document.querySelector(`.pianoKey[data-key="${keyPressEvent.keyCode}"]`);
+  
+  tone.currentTime = 0;
+  pianoKey.classList.add('pressed');
+  tone.play();
+  setTimeout(function() {
+    pianoKey.classList.remove('pressed');
+
+  }, 300);
+});
+
 </script>
 
 </html>

@@ -6,7 +6,7 @@ The goal of this project is to build a collection of randomly appearing and disa
 
 ## Step 1
 
-### Summary
+### Summary 
 
 Let's begin by setting up a couple of environment variables. These will be variables or functions that we need to make the rest of the application work.
 
